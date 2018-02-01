@@ -19,7 +19,8 @@ window.onload = function(){
     	if(flag){
     		//点击后home元素旋转
     		this.style.transform = "rotate(-720deg)";
-    		this.style.transition = 1 +(imgs.length-1)*0.1 +"s"; 
+    		//home与菜单元素动画同步
+    		this.style.transition = 1 +(imgs.length-1)*0.05 +"s"; 
     		//循环遍历imgs分别操作菜单元素
     		for(var i=0;i<imgs.length;i++){
     			//90*i/(imgs.length-1)计算每个菜单元素平分的角度
@@ -28,7 +29,7 @@ window.onload = function(){
     			//设置菜单元素的过渡效果
     			imgs[i].style.transform = "rotate(-720deg) scale(1)";
     			//设置过渡时间的延迟效果
-    			imgs[i].style.transition = "1s "+i*0.1+"s";
+    			imgs[i].style.transition = "1s "+i*0.05+"s";
     		}
     	}else{
     		//再次点击回初始位置
